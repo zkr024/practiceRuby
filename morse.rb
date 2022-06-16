@@ -43,9 +43,7 @@ print "\n"
 def decode_word(string)
   result = ''
   array = string.split
-  array.each do |value|
-    result += decode_char(value)
-  end
+  array.each {|value| result += decode_char(value)}
   result
 end
 
@@ -56,9 +54,7 @@ print "\n"
 def decode(string)
   result = ''
   arr = string.split('  ')
-  arr.each do |val|
-    result << "#{decode_word(val)} "
-  end
+  arr.each {|val| result += "#{decode_word(val)} "} 
   result
 end
 
