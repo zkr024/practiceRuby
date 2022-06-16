@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 @hash = {
   A: '.-',
   B: '-...',
@@ -43,7 +45,7 @@ print "\n"
 def decode_word(string)
   result = ''
   array = string.split
-  array.each {|value| result += decode_char(value)}
+  array.each { |value| result += decode_char(value) }
   result
 end
 
@@ -54,7 +56,7 @@ print "\n"
 def decode(string)
   result = ''
   arr = string.split('  ')
-  arr.each {|val| result += "#{decode_word(val)} "} 
+  arr.each { |val| result += "#{decode_word(val)} " }
   result
 end
 
